@@ -1,3 +1,5 @@
 gensim==3.7.3
 click==6.7
+simhash==1.9.0
+pandas==0.23.4
 scikit_learn==0.21.2

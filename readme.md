@@ -3,7 +3,7 @@ That's a basic word2vec cluster demo. You can run it with :
 `pip install -r requirements.txt`
 
 * step2:
-`python cluster.py w2vecluster --data data/alert_srv_cmd.csv --o output/srv_cmd_5.csv --k 5`
+`python cluster.py kmeans --filename data/alert_pcmline_20190617.csv -o output/pcmdline_3.csv -k 3`
 
 Now, you would see the result of predict. Have fun.
 
@@ -12,7 +12,7 @@ In my sence, i count the cmdline from alert datastets then cluster it.
 ```sql
 select srv_cmd, count(*) srv_cmd_cnt
 from xxxxxxxx.xxxx_alert_log_xxxxx
-where ds = max_pt("eleme_auditlog.eleme_alert_log")
+where ds = max_pt("xxxx.xxxxx")
 group by srv_cmd
 order by srv_cmd_cnt desc
 limit 10000;
